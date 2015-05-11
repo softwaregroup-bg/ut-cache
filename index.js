@@ -1,33 +1,63 @@
 var levelup = require('levelup');
+var ttl = require('level-ttl');
 var when = require('when');
-var _ = require('lodash');
 var cache = {};
 var bus = {};
 
 module.exports = {
-    init: function() {
-        cache = levelup('/memory', { db: require('memdown'), valueEncoding: 'json' });
+    init: function(c) {
+        var config = c || {
+            connectionString: '/memory',
+            storage: 'memdown',
+            'encoding': 'json',
+            'checkFrequency': 1000,
+            'defaultTTL': 3600
+        };
+        if (config.storage == 'memdown') {
+            cache = levelup(config.connectionString, {
+                db: require('memdown'),
+                valueEncoding: config.encoding
+            });
+        } else {
+            // TODO Error handling + Other cache storages
+        }
+        ttl(cache, {
+            checkFrequency: config.checkFrequency,
+            defaultTTL: config.defaultTTL * 1000
+        });
     },
     get: function(key) {
         return when.promise(function(resolve, reject) {
             cache.get(key, function(err, value) {
                 if (err) {
-                    reject();
+                    reject(err);
                 } else {
                     resolve(value);
                 }
             });
         });
     },
-    set: function(key, value) {
+    set: function(key, value, ttl) {
+        return when.promise(function(resolve, reject) {
+            cache.put(key, value, function (err) {
+                if (err) {
+                    reject(err);
+                } else {
+                    resolve(value);
+                }
+            });
+        }.bind(this));
+    },
+    merge: function(key, value, ttl) {
+        var _ = require('lodash');
         return when.promise(function(resolve, reject) {
             this.get(key, function(err, current) {
                 if (!err) value = _.assign(current, value);
-                cache.put(key, value, function (err) {
+                cache.put(key, value, ttl, function (err) {
                     if (err) {
-                        reject();
+                        reject(err);
                     } else {
-                        resolve();
+                        resolve(value);
                     }
                 });
             });
