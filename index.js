@@ -47,20 +47,5 @@ module.exports = {
                 }
             });
         }.bind(this));
-    },
-    merge: function(key, value, ttl) {
-        var _ = require('lodash');
-        return when.promise(function(resolve, reject) {
-            this.get(key, function(err, current) {
-                if (!err) value = _.assign(current, value);
-                cache.put(key, value, ttl, function (err) {
-                    if (err) {
-                        reject(err);
-                    } else {
-                        resolve(value);
-                    }
-                });
-            });
-        }.bind(this));
     }
 }
