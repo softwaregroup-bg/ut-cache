@@ -1,0 +1,28 @@
+{
+  "name": "ut-cache",
+  "version": "5.0.0",
+  "main": "./index",
+  "dependencies": {
+    "levelup" : "~1.2.0",
+    "leveldown" : "~1.2.2",
+    "memdown": "~1.0.0",
+    "level-sublevel" : "~6.4.6",
+    "level-ttl" : "~3.1.0",
+    "when" : "~3.7.2",
+    "lodash" : "~3.7.0"
+  },
+  "devDependencies": {
+    
+  },
+  "scripts": {
+    
+  },
+  "publishConfig": {
+    "registry": "http://npm.softwaregroup-bg.com:5001"
+  },
+  "description": "UT cache module",
+  "repository": {
+    "type": "git",
+    "url": "git@git.softwaregroup-bg.com:ut5/ut-cache.git"
+  }
+}
