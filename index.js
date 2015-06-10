@@ -70,7 +70,7 @@ function getCollection(collection) {
 module.exports = {
     init: function(bus) {
         var config = _.defaults(bus.config.cache || {}, {
-            'location': '/cache',
+            'location': 'cache',
             'storage': 'memory',
             'encoding': 'json',
             'checkFrequency': 1000,
