@@ -17,11 +17,7 @@ function getCollection(collection) {
                 return when.promise(function(resolve, reject) {
                     if (key) {
                         db.get(key, function(err, value) {
-                            if (err) {
-                                reject(err);
-                            } else {
-                                resolve(value);
-                            }
+                            resolve(value || null);
                         });
                     } else { // get all records
                         var data = [];
