@@ -6,6 +6,7 @@ var ttl = require('level-ttl');
 var when = require('when');
 var _ = require('lodash');
 var cache;
+var config;
 var collections = [];
 
 function getCollection(collection) {
@@ -42,7 +43,7 @@ function getCollection(collection) {
             },
             set: function(key, value, ttl) {
                 return when.promise(function(resolve, reject) {
-                    db.put(key, value, function(err) {
+                    db.put(key, value, {ttl: ((ttl || config.defaultTTL) * 1000)}, function(err) {
                         if (err) {
                             reject(err);
                         } else {
@@ -72,7 +73,7 @@ module.exports = {
         if (initialized) {
             return;
         }
-        var config = _.defaults(bus.config.cache || {}, {
+        config = _.defaults(bus.config.cache || {}, {
             'location': 'cache',
             'storage': 'memory',
             'encoding': 'json',
