@@ -17,7 +17,15 @@ function getCollection(collection) {
                 return when.promise(function(resolve, reject) {
                     if (key) {
                         db.get(key, function(err, value) {
-                            resolve(value || null);
+                            if(err) {
+                                if(err.notFound) {
+                                    resolve(null)
+                                } else {
+                                    reject(err);
+                                }
+                            } else {
+                                resolve(value);
+                            }
                         });
                     } else { // get all records
                         var data = [];
