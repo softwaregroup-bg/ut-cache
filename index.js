@@ -68,7 +68,7 @@ function getCollection(collection) {
                 });
             }
         }
-    };
+    }
     return collections[collection];
 }
 var initialized = false;
@@ -95,7 +95,7 @@ module.exports = {
                 valueEncoding: config.encoding
             }));
         }
-        ttl(cache, {
+        cache = ttl(cache, {
             checkFrequency: config.checkFrequency,
             defaultTTL: config.defaultTTL * 1000
         });
