@@ -69,12 +69,9 @@ function getCollection(collection) {
     }
     return collections[collection];
 }
-var initialized = false;
+
 module.exports = {
     init: function(bus) {
-        if (initialized) {
-            return;
-        }
         config = _.defaults(bus.config.cache || {}, {
             'location': 'cache',
             'storage': 'memory',
@@ -97,7 +94,6 @@ module.exports = {
             checkFrequency: config.checkFrequency,
             defaultTTL: config.defaultTTL * 1000
         });
-        initialized = true;
     },
     collection: function(collection) {
         return getCollection(collection);
