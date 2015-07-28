@@ -1,6 +1,4 @@
 var levelup = require('levelup');
-var leveldown = require('leveldown');
-var memdown = require('memdown');
 var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
 var when = require('when');
@@ -86,12 +84,12 @@ module.exports = {
         });
         if (config.storage === 'memory') {
             cache = subLevel(levelup(config.location, {
-                db: memdown,
+                db: require('memdown'),
                 valueEncoding: config.encoding
             }));
         } else if (config.storage === 'disk') {
             cache = subLevel(levelup(config.location, {
-                db: leveldown,
+                db: require('leveldown'),
                 valueEncoding: config.encoding
             }));
         }
