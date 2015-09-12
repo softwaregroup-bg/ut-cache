@@ -1,21 +1,21 @@
 {
   "name": "ut-cache",
-  "version": "5.0.0",
+  "version": "5.2.0",
   "main": "./index",
   "dependencies": {
-    "levelup" : "~1.2.0",
-    "leveldown" : "~1.2.2",
+    "leveldown": "~1.4.1",
+    "levelup": "~1.2.1",
     "memdown": "~1.0.0",
     "level-sublevel" : "~6.4.6",
     "level-ttl" : "~3.1.0",
     "when" : "~3.7.2",
-    "lodash" : "~3.7.0"
+    "lodash": "~3.10.1"
   },
   "devDependencies": {
-    
+
   },
   "scripts": {
-    
+
   },
   "publishConfig": {
     "registry": "http://npm.softwaregroup-bg.com:5001"
