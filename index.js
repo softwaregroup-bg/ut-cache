@@ -15,9 +15,9 @@ function getCollection(collection) {
                 return when.promise(function(resolve, reject) {
                     if (key) {
                         db.get(key, function(err, value) {
-                            if(err) {
-                                if(err.notFound) {
-                                    resolve(null)
+                            if (err) {
+                                if (err.notFound) {
+                                    resolve(null);
                                 } else {
                                     reject(err);
                                 }
@@ -65,7 +65,7 @@ function getCollection(collection) {
                     });
                 });
             }
-        }
+        };
     }
     return collections[collection];
 }

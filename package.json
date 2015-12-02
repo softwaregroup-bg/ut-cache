@@ -12,10 +12,11 @@
     "lodash": "~3.10.1"
   },
   "devDependencies": {
-
+    "ut-tools": "~0.5.1"
   },
   "scripts": {
-
+    "lint": "ut-lint .",
+    "test": "npm run lint"
   },
   "publishConfig": {
     "registry": "http://npm.softwaregroup-bg.com:5001"
