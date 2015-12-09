@@ -1,14 +1,14 @@
 {
   "name": "ut-cache",
-  "version": "5.2.1",
+  "version": "5.2.2",
   "main": "./index",
   "dependencies": {
     "leveldown": "~1.4.1",
     "levelup": "~1.2.1",
     "memdown": "~1.0.0",
-    "level-sublevel" : "~6.4.6",
-    "level-ttl" : "~3.1.0",
-    "when" : "~3.7.2",
+    "level-sublevel": "~6.4.6",
+    "level-ttl": "~3.1.0",
+    "when": "~3.7.2",
     "lodash": "~3.10.1"
   },
   "devDependencies": {
