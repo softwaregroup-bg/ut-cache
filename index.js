@@ -9,7 +9,11 @@ var collections = [];
 
 function getCollection(collection) {
     if (!collections[collection]) {
-        var db = cache.sublevel(collection);
+        var db = ttl(cache.sublevel(collection), {
+            checkFrequency: config.checkFrequency,
+            defaultTTL: config.defaultTTL * 1000,
+            sub: cache.sublevel('__sub__' + collection)
+        });
         collections[collection] = {
             get: function(key) {
                 return when.promise(function(resolve, reject) {
@@ -90,10 +94,6 @@ module.exports = {
                 valueEncoding: config.encoding
             }));
         }
-        cache = ttl(cache, {
-            checkFrequency: config.checkFrequency,
-            defaultTTL: config.defaultTTL * 1000
-        });
     },
     collection: function(collection) {
         return getCollection(collection);
