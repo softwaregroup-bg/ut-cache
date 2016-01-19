@@ -3,7 +3,7 @@
   "version": "5.2.5",
   "main": "./index",
   "dependencies": {
-    "leveldown": "~1.4.1",
+    "leveldown": "~1.4.3",
     "levelup": "~1.2.1",
     "memdown": "~1.0.0",
     "level-sublevel": "~6.4.6",
