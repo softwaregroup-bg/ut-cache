@@ -2,7 +2,7 @@ var levelup = require('levelup');
 var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
 var when = require('when');
-var _ = require('lodash');
+var defaults = require('lodash/object/defaults');
 var cache;
 var config;
 var collections = [];
@@ -37,9 +37,6 @@ function getCollection(collection) {
                         })
                         .on('error', function(err) {
                             reject(err);
-                        })
-                        .on('close', function() {
-                            console.log('ut-cache read stream closed');
                         })
                         .on('end', function() {
                             resolve(data);
@@ -76,7 +73,7 @@ function getCollection(collection) {
 
 module.exports = {
     init: function(bus) {
-        config = _.defaults(bus.config.cache || {}, {
+        config = defaults(bus.config.cache || {}, {
             'location': 'cache',
             'storage': 'memory',
             'encoding': 'json',
