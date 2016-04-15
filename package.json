@@ -1,6 +1,6 @@
 {
   "name": "ut-cache",
-  "version": "5.2.10",
+  "version": "5.2.11",
   "main": "./index",
   "dependencies": {
     "leveldown": "1.4.4",
