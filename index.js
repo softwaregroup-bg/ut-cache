@@ -2,7 +2,7 @@ var levelup = require('levelup');
 var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
 var when = require('when');
-var defaults = require('lodash/object/defaults');
+var defaults = require('lodash.defaults');
 var cache;
 var config;
 var collections = [];

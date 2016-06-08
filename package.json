@@ -8,8 +8,9 @@
     "memdown": "1.1.2",
     "level-sublevel": "6.5.4",
     "level-ttl": "3.1.0",
-    "when": "3.7.7",
-    "lodash": "3.10.1"
+    "lodash.assign": "4.0.9",
+    "lodash.defaults": "4.0.1",
+    "when": "3.7.7"
   },
   "devDependencies": {
     "ut-tools": "^5.3.13"
