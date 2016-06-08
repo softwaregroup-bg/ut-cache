@@ -1,3 +1,13 @@
+<a name="5.2.12"></a>
+## [5.2.12](https://git.softwaregroup-bg.com/ut5/ut-cache/compare/v5.2.11...v5.2.12) (2016-06-08)
+
+
+### Bug Fixes
+
+* upgrade lodash ([461b0b3](https://git.softwaregroup-bg.com/ut5/ut-cache/commit/461b0b3))
+
+
+
 <a name="5.2.11"></a>
 ## [5.2.11](https://git.softwaregroup-bg.com/ut5/ut-cache/compare/v5.2.10...v5.2.11) (2016-04-15)
 
