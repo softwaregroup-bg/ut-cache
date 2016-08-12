@@ -1,3 +1,13 @@
+<a name="5.4.2"></a>
+## [5.4.2](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.1...v5.4.2) (2016-08-12)
+
+
+### Bug Fixes
+
+* publish to npm ([fee6c96](https://github.com/softwaregroup-bg/ut-cache/commit/fee6c96))
+
+
+
 <a name="5.4.1"></a>
 ## [5.4.1](https://git.softwaregroup-bg.com/ut5/ut-cache/compare/v5.2.12...v5.4.1) (2016-07-11)
 
