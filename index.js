@@ -3,6 +3,7 @@ var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
 var when = require('when');
 var defaults = require('lodash.defaults');
+var Path = require('path');
 var cache;
 var config;
 var collections = [];
@@ -73,13 +74,18 @@ function getCollection(collection) {
 
 module.exports = {
     init: function(bus) {
-        config = defaults(bus.config.cache || {}, {
-            'location': 'cache',
-            'storage': 'memory',
-            'encoding': 'json',
-            'checkFrequency': 1000,
-            'defaultTTL': 3600
-        });
+        config = defaults(
+            {
+                'location': Path.join(bus.config.workDir, 'ut-cache')
+            },
+            bus.config.cache || {},
+            {
+                'storage': 'memory',
+                'encoding': 'json',
+                'checkFrequency': 1000,
+                'defaultTTL': 3600
+            }
+        );
         if (config.storage === 'memory') {
             cache = subLevel(levelup(config.location, {
                 db: require('memdown'),
