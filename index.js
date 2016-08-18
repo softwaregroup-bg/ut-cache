@@ -75,7 +75,7 @@ module.exports = {
     init: function(bus) {
         config = defaults(
             {
-                'location': path.join(bus.config.workDir, 'ut-cache')
+                'location': path.join(bus.config.workDir || '', 'ut-cache')
             },
             bus.config.cache || {},
             {

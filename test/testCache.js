@@ -20,7 +20,7 @@ x.set('x', true).then(function(res) {
             if (!(res === true)) {
                 throw new Error('Failed');
             }
-        }).done();
+        });
     }, 100);
     setTimeout(function() {
         x.get('x').then(function(res) {
@@ -28,6 +28,6 @@ x.set('x', true).then(function(res) {
             if (!(res === null)) {
                 throw new Error('Failed');
             }
-        }).done();
+        });
     }, 1100);
 });
