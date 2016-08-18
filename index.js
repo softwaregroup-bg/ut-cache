@@ -2,7 +2,7 @@ var levelup = require('levelup');
 var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
 var defaults = require('lodash.defaults');
-var Path = require('path');
+var path = require('path');
 var cache;
 var config;
 var collections = [];
@@ -75,7 +75,7 @@ module.exports = {
     init: function(bus) {
         config = defaults(
             {
-                'location': Path.join(bus.config.workDir, 'ut-cache')
+                'location': path.join(bus.config.workDir, 'ut-cache')
             },
             bus.config.cache || {},
             {
