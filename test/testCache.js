@@ -1,10 +1,10 @@
 /* eslint no-console:0 */
-var Path = require('path');
+var path = require('path');
 var cache = require('..');
 cache.init({
     config: {
         cache: {
-            location: Path.join(__dirname, 'test.db'),
+            location: path.join(__dirname, 'test.db'),
             defaultTTL: 1,
             checkFrequency: 100
         }
