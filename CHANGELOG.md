@@ -1,3 +1,18 @@
+<a name="5.4.3"></a>
+## [5.4.3](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.2...v5.4.3) (2016-08-18)
+
+
+### Bug Fixes
+
+* fix build ([6b29be8](https://github.com/softwaregroup-bg/ut-cache/commit/6b29be8))
+* fix case Path -> path ([809d0d3](https://github.com/softwaregroup-bg/ut-cache/commit/809d0d3))
+* fix case Path -> path ([7c7ed44](https://github.com/softwaregroup-bg/ut-cache/commit/7c7ed44))
+* move cache data from project root to workDir/ut-cache ([3766a82](https://github.com/softwaregroup-bg/ut-cache/commit/3766a82))
+* remove path module from test ([57903aa](https://github.com/softwaregroup-bg/ut-cache/commit/57903aa))
+* remove the dependency to when.js and bump ut-tools version ([01d5cac](https://github.com/softwaregroup-bg/ut-cache/commit/01d5cac))
+
+
+
 <a name="5.4.2"></a>
 ## [5.4.2](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.1...v5.4.2) (2016-08-12)
 
