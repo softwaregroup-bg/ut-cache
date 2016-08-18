@@ -1,7 +1,6 @@
 var levelup = require('levelup');
 var subLevel = require('level-sublevel');
 var ttl = require('level-ttl');
-var when = require('when');
 var defaults = require('lodash.defaults');
 var Path = require('path');
 var cache;
@@ -17,7 +16,7 @@ function getCollection(collection) {
         });
         collections[collection] = {
             get: function(key) {
-                return when.promise(function(resolve, reject) {
+                return new Promise(function(resolve, reject) {
                     if (key) {
                         db.get(key, function(err, value) {
                             if (err) {
@@ -46,7 +45,7 @@ function getCollection(collection) {
                 });
             },
             set: function(key, value, ttl) {
-                return when.promise(function(resolve, reject) {
+                return new Promise(function(resolve, reject) {
                     db.put(key, value, {ttl: ((ttl || config.defaultTTL) * 1000)}, function(err) {
                         if (err) {
                             reject(err);
@@ -57,7 +56,7 @@ function getCollection(collection) {
                 });
             },
             del: function(key) {
-                return when.promise(function(resolve, reject) {
+                return new Promise(function(resolve, reject) {
                     db.del(key, function(err) {
                         if (err) {
                             reject(err);
