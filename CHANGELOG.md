@@ -1,3 +1,13 @@
+<a name="5.4.4"></a>
+## [5.4.4](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.3...v5.4.4) (2016-08-26)
+
+
+### Bug Fixes
+
+* downgrade dependency to leveldown from 1.4.6. to 1.4.4 in order to use prebuilt packages ([93b7987](https://github.com/softwaregroup-bg/ut-cache/commit/93b7987))
+
+
+
 <a name="5.4.3"></a>
 ## [5.4.3](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.2...v5.4.3) (2016-08-18)
 
