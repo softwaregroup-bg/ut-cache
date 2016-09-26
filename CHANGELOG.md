@@ -1,3 +1,18 @@
+<a name="5.5.0"></a>
+# [5.5.0](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.5...v5.5.0) (2016-09-26)
+
+
+### Bug Fixes
+
+* add missing dependency ([19479e3](https://github.com/softwaregroup-bg/ut-cache/commit/19479e3))
+
+
+### Features
+
+* add bus as storage backend ([5f2c256](https://github.com/softwaregroup-bg/ut-cache/commit/5f2c256))
+
+
+
 <a name="5.4.5"></a>
 ## [5.4.5](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.4...v5.4.5) (2016-09-21)
 
