@@ -74,11 +74,10 @@ function getCollection(collection) {
 module.exports = {
     init: function(bus) {
         config = defaults(
-            {
-                'location': path.join(bus.config.workDir || '', 'ut-cache')
-            },
+            {},
             bus.config.cache || {},
             {
+                'location': path.join(bus.config.workDir || '', 'ut-cache'),
                 'storage': 'memory',
                 'encoding': 'json',
                 'checkFrequency': 1000,
@@ -93,6 +92,11 @@ module.exports = {
         } else if (config.storage === 'disk') {
             cache = subLevel(levelup(config.location, {
                 db: require('leveldown'),
+                valueEncoding: config.encoding
+            }));
+        } else if (config.storage === 'bus') {
+            cache = subLevel(levelup(config.location, {
+                db: require('./bus')(bus),
                 valueEncoding: config.encoding
             }));
         }
