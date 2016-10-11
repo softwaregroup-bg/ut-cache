@@ -1,3 +1,13 @@
+<a name="5.5.1"></a>
+## [5.5.1](https://github.com/softwaregroup-bg/ut-cache/compare/v5.5.0...v5.5.1) (2016-10-11)
+
+
+### Bug Fixes
+
+* upgrade level ([0d1f3f0](https://github.com/softwaregroup-bg/ut-cache/commit/0d1f3f0))
+
+
+
 <a name="5.5.0"></a>
 # [5.5.0](https://github.com/softwaregroup-bg/ut-cache/compare/v5.4.5...v5.5.0) (2016-09-26)
 
