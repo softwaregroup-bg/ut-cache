@@ -1,3 +1,13 @@
+<a name="5.6.1"></a>
+## [5.6.1](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.0...v5.6.1) (2017-03-09)
+
+
+### Bug Fixes
+
+* dependencies ([1cb8b9b](https://github.com/softwaregroup-bg/ut-cache/commit/1cb8b9b))
+
+
+
 <a name="5.6.0"></a>
 # [5.6.0](https://github.com/softwaregroup-bg/ut-cache/compare/v5.5.3...v5.6.0) (2016-12-23)
 
