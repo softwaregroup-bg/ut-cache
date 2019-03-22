@@ -13,7 +13,8 @@
     "lodash.defaults": "4.2.0"
   },
   "devDependencies": {
-    "ut-tools": "^5.13.5"
+    "tap": "^12.6.0",
+    "ut-tools": "^6.8.10"
   },
   "scripts": {
     "lint": "ut-lint .",
