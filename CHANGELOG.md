@@ -1,3 +1,12 @@
+## [5.6.9](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.8...v5.6.9) (2019-03-22)
+
+
+### Bug Fixes
+
+* lint ([2f026f5](https://github.com/softwaregroup-bg/ut-cache/commit/2f026f5))
+
+
+
 <a name="5.6.8"></a>
 ## [5.6.8](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.7...v5.6.8) (2019-03-22)
 
