@@ -32,15 +32,15 @@ function getCollection(collection) {
                     } else { // get all records
                         var data = [];
                         db.createReadStream()
-                        .on('data', function(record) {
-                            data.push({key: record.key, value: record.value});
-                        })
-                        .on('error', function(err) {
-                            reject(err);
-                        })
-                        .on('end', function() {
-                            resolve(data);
-                        });
+                            .on('data', function(record) {
+                                data.push({key: record.key, value: record.value});
+                            })
+                            .on('error', function(err) {
+                                reject(err);
+                            })
+                            .on('end', function() {
+                                resolve(data);
+                            });
                     }
                 });
             },
