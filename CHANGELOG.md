@@ -1,3 +1,12 @@
+## [5.6.10](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.9...v5.6.10) (2019-09-12)
+
+
+### Bug Fixes
+
+* update dependencies ([a0b461d](https://github.com/softwaregroup-bg/ut-cache/commit/a0b461d))
+
+
+
 ## [5.6.9](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.8...v5.6.9) (2019-03-22)
 
 
