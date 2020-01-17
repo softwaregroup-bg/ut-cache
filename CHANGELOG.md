@@ -1,3 +1,7 @@
+## [5.6.11](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.10...v5.6.11) (2020-01-17)
+
+
+
 ## [5.6.10](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.9...v5.6.10) (2019-09-12)
 
 
