@@ -1,3 +1,22 @@
+# [6.0.0](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.11...v6.0.0) (2020-07-20)
+
+
+### Documentation
+
+* README ([53e7ff4](https://github.com/softwaregroup-bg/ut-cache/commit/53e7ff4a4fbaf38c4e71b554da8a0f94bfcdb57b))
+
+
+* BREAKING CHANGE: user ut-port-cache internally ([b068eb7](https://github.com/softwaregroup-bg/ut-cache/commit/b068eb73ae0e5c903f29b802e008c55eb0978657))
+
+
+### BREAKING CHANGES
+
+* ut-cache to be used as a standard ut module
+* update in accordance to latest UT Framework standards
+BREALING CHANGE: ut-cache to be used as a standard ut module
+
+
+
 ## [5.6.11](https://github.com/softwaregroup-bg/ut-cache/compare/v5.6.10...v5.6.11) (2020-01-17)
 
 
