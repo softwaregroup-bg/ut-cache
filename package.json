@@ -7,7 +7,7 @@
       "ut-port-cache": "^0.3.2"
   },
   "devDependencies": {
-      "tap": "^14.10.7",
+      "tap": "^12.7.0",
       "ut-tools": "^6.33.6"
   },
   "scripts": {
