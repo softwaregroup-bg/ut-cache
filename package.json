@@ -4,11 +4,11 @@
     "description": "UT cache",
     "main": "index.js",
     "dependencies": {
-        "ut-port-cache": "^0.3.2"
+        "ut-port-cache": "^0.4.0"
     },
     "devDependencies": {
-        "tap": "^12.7.0",
-        "ut-tools": "^6.33.6"
+        "tap": "^15.0.9",
+        "ut-tools": "^6.39.0"
     },
     "scripts": {
         "lint": "ut-lint .",
